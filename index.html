@@ -6,7 +6,6 @@
 
   <title>ארונות שירות בהתאמה אישית | נגר אהרון כהן</title>
   <meta name="description" content="ארונות שירות בהתאמה אישית מאת נגר אהרון כהן, עם מעל 40 שנות ניסיון, תכנון מדויק, חומרים איכותיים ופתרונות אחסון לכל חלל בבית.">
-
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#34312E">
 
@@ -24,7 +23,6 @@
       --orange:#ED6C44;
       --dark:#34312E;
       --brown:#8A6A4F;
-      --light-brown:#EFE4D6;
       --cream:#FBF7F1;
       --turquoise:#2AC1BA;
       --sky:#62CBE8;
@@ -35,8 +33,6 @@
       --border:rgba(52,49,46,.16);
       --shadow:0 18px 48px rgba(26,20,15,.14);
       --shadow-soft:0 10px 28px rgba(26,20,15,.10);
-      --radius:24px;
-      --radius-small:16px;
       --focus:0 0 0 4px rgba(237,108,68,.28);
       --container:1180px;
     }
@@ -104,18 +100,18 @@
     }
 
     h1{
-      font-size:clamp(1.9rem, 4vw, 3.45rem);
-      max-width:920px;
+      font-size:clamp(1.85rem, 3.7vw, 3.35rem);
+      max-width:850px;
       font-weight:800;
     }
 
     h2{
-      font-size:clamp(1.85rem, 3.2vw, 3rem);
+      font-size:clamp(1.75rem, 3vw, 2.8rem);
       font-weight:800;
     }
 
     h3{
-      font-size:clamp(1.32rem, 2vw, 1.75rem);
+      font-size:clamp(1.28rem, 2vw, 1.7rem);
       font-weight:800;
     }
 
@@ -187,7 +183,7 @@
     }
 
     .lead{
-      font-size:clamp(1.05rem, 1.4vw, 1.28rem);
+      font-size:clamp(1.05rem, 1.35vw, 1.22rem);
       line-height:1.75;
       color:#3a332f;
       max-width:880px;
@@ -204,6 +200,7 @@
       font-weight:800;
       transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
       cursor:pointer;
+      text-align:center;
     }
 
     .btn-primary{
@@ -233,7 +230,7 @@
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(251,247,241,.94);
+      background:rgba(251,247,241,.96);
       backdrop-filter:blur(16px);
       border-bottom:1px solid var(--border);
     }
@@ -253,6 +250,7 @@
       font-weight:900;
       color:var(--black);
       white-space:nowrap;
+      line-height:1.2;
     }
 
     .brand-mark{
@@ -265,6 +263,7 @@
       place-items:center;
       font-weight:900;
       box-shadow:0 10px 24px rgba(237,108,68,.28);
+      flex:0 0 42px;
     }
 
     .brand small{
@@ -303,6 +302,7 @@
       color:var(--white);
       cursor:pointer;
       position:relative;
+      flex:0 0 48px;
     }
 
     .burger span{
@@ -469,7 +469,7 @@
     .content-card{
       background:var(--white);
       border:1px solid var(--border);
-      border-radius:var(--radius);
+      border-radius:24px;
       padding:34px;
       box-shadow:var(--shadow-soft);
     }
@@ -694,7 +694,7 @@
     }
 
     details[open] summary::after{
-      content:"–";
+      content:"-";
     }
 
     details p{
@@ -718,11 +718,6 @@
     .contact-strip h2{
       color:var(--white);
       margin-bottom:0;
-    }
-
-    .contact-strip p{
-      color:rgba(255,255,255,.88);
-      margin:0;
     }
 
     .footer{
@@ -827,18 +822,6 @@
       transform:translateY(-2px);
     }
 
-    .sr-only{
-      position:absolute;
-      width:1px;
-      height:1px;
-      padding:0;
-      margin:-1px;
-      overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;
-      border:0;
-    }
-
     @media (max-width:980px){
       .hero-grid,
       .intro-grid,
@@ -884,7 +867,16 @@
       }
 
       h1{
-        font-size:clamp(1.85rem, 8vw, 2.65rem);
+        font-size:clamp(1.78rem, 7vw, 2.45rem);
+        line-height:1.16;
+      }
+
+      h2{
+        font-size:clamp(1.55rem, 6vw, 2.12rem);
+      }
+
+      h3{
+        font-size:clamp(1.22rem, 4.8vw, 1.5rem);
       }
 
       .container{
@@ -892,23 +884,59 @@
       }
 
       .site-header{
+        position:sticky;
         background:rgba(251,247,241,.98);
+      }
+
+      .nav-wrap{
+        min-height:66px;
+        gap:10px;
+      }
+
+      .brand{
+        gap:9px;
+        min-width:0;
+        white-space:normal;
+        align-items:center;
+      }
+
+      .brand > span:last-child{
+        min-width:0;
+        line-height:1.15;
+        font-size:18px;
+      }
+
+      .brand small{
+        display:none;
+      }
+
+      .brand-mark{
+        width:40px;
+        height:40px;
+        flex-basis:40px;
+        border-radius:13px;
       }
 
       .burger{
         display:block;
+        width:44px;
+        height:44px;
+        flex-basis:44px;
+        border-radius:13px;
       }
 
       .main-nav{
         position:fixed;
-        inset:76px 0 auto 0;
+        inset:66px 0 auto 0;
         background:var(--cream);
         border-bottom:1px solid var(--border);
         box-shadow:0 20px 50px rgba(0,0,0,.14);
-        padding:18px 15px 24px;
+        padding:15px;
         display:none;
         grid-template-columns:1fr;
         gap:8px;
+        max-height:calc(100vh - 66px);
+        overflow:auto;
       }
 
       .menu-open .main-nav{
@@ -918,14 +946,59 @@
       .main-nav a{
         background:var(--white);
         border:1px solid var(--border);
-        padding:14px 16px;
+        padding:13px 16px;
       }
 
       .hero{
-        padding:58px 0 48px;
+        padding:44px 0 44px;
       }
 
-      .hero-badges,
+      .hero-grid{
+        gap:26px;
+      }
+
+      .hero .lead{
+        line-height:1.68;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+        gap:10px;
+        margin-top:22px;
+      }
+
+      .btn{
+        width:100%;
+        min-height:50px;
+        padding:12px 16px;
+      }
+
+      .hero-badges{
+        grid-template-columns:1fr;
+        gap:10px;
+        margin-top:22px;
+      }
+
+      .badge{
+        padding:14px;
+      }
+
+      .hero-card{
+        padding:10px;
+        border-radius:24px;
+      }
+
+      .hero-card img{
+        border-radius:18px;
+        aspect-ratio:4/3;
+      }
+
+      .hero-note{
+        padding:14px;
+        border-radius:16px;
+      }
+
       .cards-grid,
       .tips-grid,
       .process,
@@ -933,42 +1006,66 @@
         grid-template-columns:1fr;
       }
 
-      .hero-actions{
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .btn{
-        width:100%;
-      }
-
       .section{
-        padding:62px 0;
+        padding:58px 0;
       }
 
       .section.compact{
-        padding:44px 0;
+        padding:42px 0;
       }
 
       .content-card,
-      .contact-strip{
-        padding:24px;
-        border-radius:24px;
+      .contact-strip,
+      .service-card,
+      .tip,
+      .material-box{
+        padding:22px;
+        border-radius:22px;
       }
 
       .image-stack{
         grid-template-columns:1fr;
       }
 
-      .floating-call{
-        left:14px;
-        right:14px;
-        bottom:14px;
-        width:auto;
+      .image-stack img{
+        min-height:220px;
+      }
+
+      summary{
+        padding:18px 18px;
+        align-items:flex-start;
+      }
+
+      details p{
+        padding:0 18px 20px;
+      }
+
+      .contact-strip{
+        gap:18px;
+        text-align:center;
       }
 
       .footer{
-        padding-bottom:96px;
+        padding:56px 0 100px;
+      }
+
+      .footer-grid{
+        gap:22px;
+      }
+
+      .footer .call-button{
+        width:100%;
+        justify-content:center;
+        text-align:center;
+      }
+
+      .floating-call{
+        left:15px;
+        right:15px;
+        bottom:14px;
+        width:auto;
+        min-height:52px;
+        padding:12px 16px;
       }
     }
 
@@ -1069,7 +1166,7 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow light">נגרות בהתאמה אישית עם מעל 40 שנות ניסיון</span>
-          <h1 id="hero-title">ארונות שירות שמתוכננים נכון לבית, לשימוש היומיומי ולמידות המדויקות של החלל</h1>
+          <h1 id="hero-title">ארונות שירות בהתאמה אישית לבית</h1>
           <p class="lead">
             כשאני מתכנן ארון שירות, אני מתחיל מהשימוש בפועל בבית: מה רוצים לאחסן, כמה פעמים ביום ניגשים לארון,
             איפה יש קיר, איפה יש צנרת, מה רמת הלחות בחדר ואיך הארון צריך להשתלב בעיצוב של הבית.
@@ -1367,7 +1464,7 @@
       <div class="container intro-grid">
         <div>
           <span class="eyebrow light">ניסיון, הקשבה ותכנון מקצועי</span>
-          <h2 id="about-title">אהרון כהן — נגרות שמתחילה בהבנת הצורך</h2>
+          <h2 id="about-title">אהרון כהן - נגרות שמתחילה בהבנת הצורך</h2>
           <p>
             אהרון כהן מנהל ובעלים של נגרייה בעלת מוניטין של מעל 40 שנה. העבודה מבוססת על הקשבה,
             תיאום ציפיות, ייעוץ מקצועי, שקיפות בתהליך והתאמת הפתרון לאתר הלקוח ולאורח החיים שלו.
