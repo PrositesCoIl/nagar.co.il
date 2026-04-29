@@ -104,7 +104,7 @@
     }
 
     h1{
-      font-size:clamp(2.15rem, 4.8vw, 4.2rem);
+      font-size:clamp(1.9rem, 4vw, 3.45rem);
       max-width:920px;
       font-weight:800;
     }
@@ -717,7 +717,7 @@
 
     .contact-strip h2{
       color:var(--white);
-      margin-bottom:10px;
+      margin-bottom:0;
     }
 
     .contact-strip p{
@@ -881,6 +881,10 @@
       summary,
       span{
         font-size:18px;
+      }
+
+      h1{
+        font-size:clamp(1.85rem, 8vw, 2.65rem);
       }
 
       .container{
@@ -1067,7 +1071,7 @@
           <span class="eyebrow light">נגרות בהתאמה אישית עם מעל 40 שנות ניסיון</span>
           <h1 id="hero-title">ארונות שירות שמתוכננים נכון לבית, לשימוש היומיומי ולמידות המדויקות של החלל</h1>
           <p class="lead">
-            כשאני מתכנן ארון שירות, אני מתחיל מהחיים עצמם: מה רוצים לאחסן, כמה פעמים ביום ניגשים לארון,
+            כשאני מתכנן ארון שירות, אני מתחיל מהשימוש בפועל בבית: מה רוצים לאחסן, כמה פעמים ביום ניגשים לארון,
             איפה יש קיר, איפה יש צנרת, מה רמת הלחות בחדר ואיך הארון צריך להשתלב בעיצוב של הבית.
             ארון טוב הוא לא רק ארגז עם דלתות. הוא פתרון אחסון מדויק, נגיש, חזק ונוח לשנים קדימה.
           </p>
@@ -1093,8 +1097,8 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="תמונה של ארון אמבטיה בהתאמה אישית">
-          <img src="cabinet-bathroom-07 from web client.jpg" alt="ארון אמבטיה תלוי בעבודת נגרות בהתאמה אישית עם חזיתות בהירות ומסגרת עץ" width="990" height="704">
+        <aside class="hero-card" aria-label="תמונה של ארון שירות בהתאמה אישית">
+          <img src="ארונות-שירות from web client.jpg" alt="התקנת ארון שירות גדול בהתאמה אישית במהלך עבודת נגרות בבית" width="800" height="450">
           <div class="hero-note">
             תכנון לפי מידה, בחירת חומר נכונה, התאמת פרזול ושילוב גימור שמתאים לחלל ולסגנון הבית.
           </div>
@@ -1109,7 +1113,7 @@
             <img src="cabinet-bathroom-02 from web client.jpg" alt="ארונות שירות ואחסון לבנים בנגרות אישית בחדר רחצה עם מגירות רחבות" width="990" height="704">
           </figure>
           <figure>
-            <img src="ארונות-שירות from web client.jpg" alt="התקנת ארון שירות גדול בהתאמה אישית במהלך עבודת נגרות בבית" width="800" height="450">
+            <img src="cabinet-bathroom-07 from web client.jpg" alt="ארון אמבטיה תלוי בעבודת נגרות בהתאמה אישית עם חזיתות בהירות ומסגרת עץ" width="990" height="704">
           </figure>
           <figure>
             <img src="cabinet-deep-recessed-in-wall from web client.jpg" alt="ארון שירות ירוק שקוע בקיר עם מגירות, דלתות ופתרונות אחסון פנימיים" width="940" height="704">
@@ -1117,7 +1121,7 @@
         </div>
 
         <div class="content-card">
-          <span class="eyebrow">התאמה אמיתית למקום</span>
+          <span class="eyebrow">התאמה מדויקת למקום</span>
           <h2 id="service-title">מה הופך ארון שירות לארון שבאמת עובד?</h2>
           <p>
             ארון שירות נועד לעשות סדר במקום שבו בדרך כלל מצטברים פריטים רבים: מוצרי ניקיון, מגבות, כלי עבודה,
@@ -1458,10 +1462,6 @@
         <div class="contact-strip">
           <div>
             <h2 id="final-title">רוצים ארון שמתאים בדיוק למקום ולשימוש שלכם?</h2>
-            <p>
-              אפשר להתחיל מתיאור קצר של המקום ומה אתם רוצים לאחסן. משם מתקדמים למדידה, תכנון, בחירת חומרים
-              והצעת מחיר מסודרת.
-            </p>
           </div>
           <a class="btn btn-outline" href="#footer-contact" title="מעבר לפרטי יצירת קשר בפוטר">לפרטי יצירת קשר</a>
         </div>
@@ -1540,7 +1540,6 @@
 
   <script>
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('#main-nav');
     const navLinks = document.querySelectorAll('#main-nav a');
 
     function closeMenu() {
